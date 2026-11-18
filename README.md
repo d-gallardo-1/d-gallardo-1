@@ -7,6 +7,10 @@ back offices, legal archives and engineering departments. The repositories below
 reference architectures. Each one is small enough to read in an afternoon, runs on a
 laptop with no internet connection, and uses only synthetic data.
 
+**Contact:** if one of these systems is close to a problem you are working on, message me on
+[LinkedIn](https://www.linkedin.com/in/dario-gallardo-0b1654304/). I am open to contract work and
+full-time roles.
+
 ## Reference architectures
 
 | System | Domain | What it shows | Port | Status |
