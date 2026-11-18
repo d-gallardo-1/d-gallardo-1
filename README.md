@@ -26,14 +26,16 @@ deployment pattern, which is what makes them comparable.
 ```mermaid
 flowchart LR
     subgraph Domains["Four domains"]
+        direction TB
         P1["plantpulse-live-ops<br/>alarms, interlocks, field network<br/>:8080"]
         P2["reconcile-core-engine<br/>ERP, bank and tax ledgers<br/>:8081"]
         P3["onprem-stream-indexer<br/>regulations and case law<br/>:8082"]
         P4["assetflow-multi-pipeline<br/>land, build-to-suit, parks, advisory<br/>:8083"]
+        P1 ~~~ P2 ~~~ P3 ~~~ P4
     end
 
     subgraph Pattern["Shared pattern, one stack per repository"]
-        direction TB
+        direction LR
         UI["Browser<br/>React SPA, EventSource client"]
         NGINX["Nginx, unprivileged<br/>static bundle and /api proxy<br/>buffering off for SSE"]
         API["FastAPI, single worker<br/>in-memory state, bounded queue per client"]
@@ -43,10 +45,7 @@ flowchart LR
         API --> DATA
     end
 
-    P1 --> Pattern
-    P2 --> Pattern
-    P3 --> Pattern
-    P4 --> Pattern
+    Domains --> Pattern
 ```
 
 ## Design rules shared by every repository
