@@ -13,7 +13,7 @@ laptop with no internet connection, and uses only synthetic data.
 | --- | --- | --- | --- | --- |
 | [plantpulse-live-ops](https://github.com/d-gallardo-1/plantpulse-live-ops) | Industrial operations | Live alarm diagnostics, Cause & Effect matrix parsing from Excel, field network watchdog | 8080 | Published |
 | reconcile-core-engine | Finance, bank and tax | Three-pass reconciliation of ERP, bank and tax sources with live progress and an Excel audit pack | 8081 | Pre-release |
-| onprem-stream-indexer | Regulatory and case law | Per-tenant ingestion and full-text search that streams matching rulings as they are found, with live outcome analytics and an Excel report | 8082 | Pre-release |
+| [onprem-stream-indexer](https://github.com/d-gallardo-1/onprem-stream-indexer) | Regulatory and case law | Per-tenant ingestion and full-text search that streams matching rulings as they are found, with live outcome analytics and an Excel report | 8082 | Published |
 | [assetflow-multi-pipeline](https://github.com/d-gallardo-1/assetflow-multi-pipeline) | Capital assets and infrastructure sites | Four-pipeline Kanban board with live sync, CSV ingestion with validation, soft-delete trash bin with retention, portfolio analytics | 8083 | Published |
 
 Each system has its own port, so all four can run side by side on one machine.
